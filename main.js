@@ -60,7 +60,7 @@ async function query(path) {
     const response = await fetch(ENDPOINT + path, {
         method: "GET",
         headers: {
-            'authorization': "Token " + (await getToken()),
+            'authorization': "Token " + token,
         },
     });
     const result = await response.json();
