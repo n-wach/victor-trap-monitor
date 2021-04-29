@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trap Monitor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div>
+  <h1>
+    Victor Smart Kill Monitor
+  </h1>
+  <p>
+    View the status of your Victor Smart Kill rat trap in the browser, without using the mobile app. More information
+    can be found on <a href="https://github.com/n-wach/victor-trap-monitor">Github</a>.
+  </p>
+  <h2>
+    Credentials
+  </h2>
+  <p>
+    You must provide the email and password of your Victor Smart Kill account. They are required to view your
+    trap information and will be sent directly to Victor. For convenience, credentials can be saved
+    in your browser for future visits.
+  </p>
+  <form>
+    <label>Email<br><input type="text" id="username"><br></label>
+    <label>Password<br><input type="password" id="password"><br></label>
+    <label>Show password<input type="checkbox" onchange="setShowPassword(this.checked)"><br></label>
+    <button onclick="saveCreds()">Save</button>
+    <button onclick="loadTraps()">Refresh traps</button>
+  </form>
+</div>
+<div>
+  <h2>
+    Traps
+  </h2>
+  <div id="traps">
+
+  </div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
